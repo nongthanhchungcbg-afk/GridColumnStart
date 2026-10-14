@@ -239,32 +239,38 @@ h1 em {
     grid-column-start: span 2;
 }
 
-.board-line {
-    position: relative;
-    grid-template-rows: 15px 53px;
-    grid-auto-rows: 53px;
-    gap: 5px 7px;
+.line-demo {
+    padding-top: 16px;
 }
 
-.board-line .line-number {
-    position: relative;
+.line-markers {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1px 4px;
     color: #9b8053;
     font-family: "DM Mono", monospace;
     font-size: 9px;
-    text-align: left;
 }
 
-.board-line .line-number::after {
+.board-line {
+    grid-auto-rows: 53px;
+}
+
+.board-line .item-lead {
+    grid-column-start: 2;
+}
+
+.line-markers span {
+    position: relative;
+}
+
+.line-markers span::after {
     position: absolute;
-    top: 15px;
-    bottom: -62px;
+    top: 14px;
     left: 0;
+    height: 58px;
     border-left: 1px dashed rgba(154, 125, 77, 0.32);
     content: "";
-}
-
-.board-line .item:nth-child(6) {
-    grid-column-start: 2;
 }
 
 .code {
@@ -345,13 +351,8 @@ footer {
         gap: 5px;
     }
 
-    .board-line {
-        grid-template-rows: 13px 49px;
-    }
-
-    .board-line .line-number::after {
-        top: 13px;
-        bottom: -56px;
+    .line-demo {
+        padding-top: 14px;
     }
 
     .item {
