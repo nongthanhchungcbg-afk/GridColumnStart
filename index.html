@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="So sánh các giá trị auto, span và column line của CSS grid-column-start.">
+    <title>Grid Column Start — CSS Grid Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#top"><span>G</span> CSS GRID LAB</a>
+        <p>Bài thực hành <strong>02 / 04</strong></p>
+    </header>
+
+    <main id="top">
+        <section class="intro">
+            <p class="eyebrow">GRID PROPERTIES / 02</p>
+            <h1>Chọn điểm bắt đầu<br><em>của một item.</em></h1>
+            <p class="intro-copy"><code>grid-column-start</code> chọn đường kẻ cột nơi item bắt đầu, hoặc để Grid tự xếp item vào vị trí phù hợp.</p>
+        </section>
+
+        <section class="example">
+            <div class="example-heading">
+                <div><span class="example-index">A</span><h2><code>auto</code> · Theo luồng tự động</h2></div>
+                <span class="result">vị trí mặc định</span>
+            </div>
+            <div class="board board-auto" aria-label="Lưới bốn cột với item được tự động xếp">
+                <div class="item item-lead"><span>ITEM 1</span> auto</div>
+                <div class="item"><span>ITEM 2</span></div>
+                <div class="item"><span>ITEM 3</span></div>
+                <div class="item"><span>ITEM 4</span></div>
+            </div>
+            <p class="code"><code>grid-column-start: auto;</code><span>Item bắt đầu ở cột kế tiếp còn trống.</span></p>
+        </section>
+
+        <section class="example">
+            <div class="example-heading">
+                <div><span class="example-index alt-index">B</span><h2><code>span 2</code> · Chiếm hai cột</h2></div>
+                <span class="result">item 1 kéo dài</span>
+            </div>
+            <div class="board board-span" aria-label="Lưới bốn cột, item đầu tiên kéo dài hai cột">
+                <div class="item item-lead"><span>ITEM 1</span> span 2</div>
+                <div class="item"><span>ITEM 2</span></div>
+                <div class="item"><span>ITEM 3</span></div>
+                <div class="item"><span>ITEM 4</span></div>
+            </div>
+            <p class="code"><code>grid-column-start: span 2;</code><span>Item đầu tiên chiếm hai track cột.</span></p>
+        </section>
+
+        <section class="example">
+            <div class="example-heading">
+                <div><span class="example-index third-index">C</span><h2><code>2</code> · Bắt đầu tại đường kẻ 2</h2></div>
+                <span class="result">4 cột / 5 đường kẻ</span>
+            </div>
+            <div class="board board-line" aria-label="Lưới bốn cột với đường kẻ cột được đánh số">
+                <div class="line-number">1</div><div class="line-number">2</div><div class="line-number">3</div><div class="line-number">4</div><div class="line-number">5</div>
+                <div class="item item-lead"><span>ITEM 1</span> line 2</div>
+                <div class="item"><span>ITEM 2</span></div>
+                <div class="item"><span>ITEM 3</span></div>
+                <div class="item"><span>ITEM 4</span></div>
+            </div>
+            <p class="code"><code>grid-column-start: 2;</code><span>Item đầu tiên bắt đầu tại đường kẻ 2.</span></p>
+        </section>
+
+        <aside class="note">
+            <span aria-hidden="true">✳</span>
+            <p><strong>Đọc đường kẻ</strong> Bốn cột có năm đường kẻ. `span 2` là độ rộng theo số track; số `2` là vị trí của đường kẻ bắt đầu.</p>
+        </aside>
+    </main>
+
+    <footer><span>CSS GRID LAB</span><span>02 — 04</span></footer>
+</body>
+</html>
